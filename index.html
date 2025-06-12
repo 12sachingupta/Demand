@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Webcrumbs Plugin</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+      @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+      @import url(
+        https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200
+      );
+      /* No changes to your Tailwind classes or UI—only minimal helper CSS if needed */
+    </style>
+  </head>
+  <body>
+    <div id="webcrumbs">
+      <div
+        data-id="mPsT"
+        class="w-[1920px] min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 p-8 font-sans overflow-hidden"
+      >
+        <div data-id="Vclk" class="absolute inset-0 opacity-10">
+          <div
+            data-id="OKre"
+            class="w-full h-full bg-gradient-to-r from-cyan-500/20 via-transparent to-purple-500/20 animate-pulse"
+          ></div>
+        </div>
+        <header
+          data-id="wZgY"
+          class="relative mb-8 backdrop-blur-2xl bg-white/5 rounded-3xl p-6 border border-cyan-400/20 shadow-2xl"
+        >
+          <div data-id="l4b4" class="flex items-center justify-between">
+            <div data-id="lYUG" class="flex items-center space-x-6">
+              <button
+                id="backButton"
+                data-id="4rVJ"
+                class="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50"
+              >
+                <span data-id="Tb2h" class="material-symbols-outlined text-slate-900"
+                  >arrow_back</span
+                >
+              </button>
+              <h1
+                data-id="BeOr"
+                class="text-6xl font-bold text-white tracking-tight"
+              >
+                Demand Forecasting
+              </h1>
+            </div>
+            <button
+              id="runForecastBtn"
+              data-id="-j3U"
+              class="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-full text-white font-semibold hover:scale-105 transition-all duration-300 animate-pulse shadow-lg hover:shadow-purple-500/50"
+            >
+              Run Forecast
+            </button>
+          </div>
+        </header>
+        <div data-id="wImw" class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+          <div
+            data-id="lN75"
+            class="lg:col-span-2 backdrop-blur-2xl bg-white/5 rounded-3xl p-8 border border-cyan-400/20 shadow-2xl"
+          >
+            <h2 data-id="poxC" class="text-3xl font-bold text-white mb-6">
+              Time Range Selection
+            </h2>
+            <div id="timeRangeContainer" data-id="pKbH" class="flex space-x-4 mb-8">
+              <!-- Added data-range attributes and IDs but preserved classes/text -->
+              <button
+                id="btn6M"
+                data-range="6M"
+                data-id="s4n9"
+                class="px-8 py-3 bg-cyan-400 text-slate-900 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+              >
+                6M
+              </button>
+              <button
+                id="btn12M"
+                data-range="12M"
+                data-id="eYTN"
+                class="px-8 py-3 bg-white/10 text-white rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
+              >
+                12M
+              </button>
+              <button
+                id="btn24M"
+                data-range="24M"
+                data-id="3k7J"
+                class="px-8 py-3 bg-white/10 text-white rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
+              >
+                24M
+              </button>
+            </div>
+            <div data-id="lQZf" class="space-y-6">
+              <div data-id="D-FY">
+                <label data-id="vj93" class="block text-gray-300 mb-2 font-medium"
+                  >Custom Date Range</label
+                >
+                <div data-id="ZSH9" class="flex space-x-4">
+                  <input
+                    id="customDateStart"
+                    data-id="kg30"
+                    type="date"
+                    class="bg-white/10 border border-cyan-400/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-all duration-300"
+                  />
+                  <input
+                    id="customDateEnd"
+                    data-id="bwfl"
+                    type="date"
+                    class="bg-white/10 border border-cyan-400/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-all duration-300"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-id="N4P0"
+            class="backdrop-blur-2xl bg-white/5 rounded-3xl p-8 border border-cyan-400/20 shadow-2xl"
+          >
+            <h2 data-id="BP-M" class="text-3xl font-bold text-white mb-6">
+              Advanced Settings
+            </h2>
+            <details data-id="R1f4" class="mb-6">
+              <summary
+                data-id="-n2F"
+                class="text-cyan-400 font-semibold cursor-pointer hover:text-cyan-300 transition-colors duration-300 text-xl"
+              >
+                Seasonality Factors
+              </summary>
+              <div data-id="4wel" class="mt-4 space-y-4">
+                <div data-id="Bt1a" class="flex items-center justify-between">
+                  <span data-id="8pSe" class="text-gray-300"
+                    >Include Seasonal Trends</span
+                  >
+                  <input
+                    id="includeSeasonality"
+                    data-id="-Q-X"
+                    type="checkbox"
+                    class="w-6 h-6 accent-cyan-400"
+                    checked
+                  />
+                </div>
+                <div data-id="8VLc" class="flex items-center justify-between">
+                  <span data-id="bQMN" class="text-gray-300">Holiday Impact</span>
+                  <input
+                    id="holidayImpact"
+                    data-id="jEEY"
+                    type="checkbox"
+                    class="w-6 h-6 accent-cyan-400"
+                  />
+                </div>
+              </div>
+            </details>
+            <details data-id="v4Ox" class="mb-6">
+              <summary
+                data-id="8Omz"
+                class="text-cyan-400 font-semibold cursor-pointer hover:text-cyan-300 transition-colors duration-300 text-xl"
+              >
+                Local Events
+              </summary>
+              <div data-id="kfgR" class="mt-4 space-y-2">
+                <div data-id="DUep" class="flex flex-wrap gap-2">
+                  <span
+                    data-id="8lS-"
+                    class="bg-purple-500/30 text-purple-200 px-3 py-1 rounded-full text-sm"
+                    >Festival Season</span
+                  >
+                  <span
+                    data-id="iCjc"
+                    class="bg-cyan-500/30 text-cyan-200 px-3 py-1 rounded-full text-sm"
+                    >Monsoon</span
+                  >
+                  <span
+                    data-id="Mxec"
+                    class="bg-pink-500/30 text-pink-200 px-3 py-1 rounded-full text-sm"
+                    >Wedding Season</span
+                  >
+                </div>
+              </div>
+            </details>
+            <details data-id="AWVG">
+              <summary
+                data-id="9LXS"
+                class="text-cyan-400 font-semibold cursor-pointer hover:text-cyan-300 transition-colors duration-300 text-xl"
+              >
+                Promotional Campaigns
+              </summary>
+              <div data-id="plM8" class="mt-4 space-y-4">
+                <div data-id="yM9X">
+                  <label data-id="24vn" class="block text-gray-300 mb-2"
+                    >Discount Impact</label
+                  >
+                  <input
+                    id="discountImpact"
+                    data-id="EMGu"
+                    type="range"
+                    class="w-full accent-cyan-400"
+                    min="0"
+                    max="100"
+                    value="30"
+                  />
+                </div>
+                <div data-id="DfHK">
+                  <label data-id="A9UN" class="block text-gray-300 mb-2"
+                    >Marketing Spend</label
+                  >
+                  <input
+                    id="marketingSpend"
+                    data-id="J45B"
+                    type="range"
+                    class="w-full accent-purple-400"
+                    min="0"
+                    max="100"
+                    value="60"
+                  />
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div data-id="Ca05" class="backdrop-blur-2xl bg-white/5 rounded-3xl p-8 border border-cyan-400/20 shadow-2xl mb-8">
+          <div data-id="NMqb" class="flex items-center justify-between mb-6">
+            <h2 data-id="FHVE" class="text-3xl font-bold text-white">
+              Forecast Visualization
+            </h2>
+            <div data-id="fika" class="flex space-x-4">
+              <button
+                id="zoomInBtn"
+                data-id="Vdik"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+              >
+                <span data-id="J4sh" class="material-symbols-outlined text-white"
+                  >zoom_in</span
+                >
+              </button>
+              <button
+                id="zoomOutBtn"
+                data-id="VQ9C"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+              >
+                <span data-id="2JnH" class="material-symbols-outlined text-white"
+                  >zoom_out</span
+                >
+              </button>
+              <button
+                id="refreshVizBtn"
+                data-id="lj3I"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+              >
+                <span data-id="BiVQ" class="material-symbols-outlined text-white"
+                  >refresh</span
+                >
+              </button>
+            </div>
+          </div>
+          <div
+            id="visualizationContainer"
+            data-id="Mi4N"
+            class="h-96 bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-6 relative overflow-hidden"
+          >
+            <div data-id="c86g" class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+            <!-- Existing SVG retained exactly -->
+            <svg
+              id="vizSVG"
+              data-id="OoK1"
+              class="w-full h-full"
+              viewBox="0 0 800 300"
+            >
+              <defs data-id="m5XE">
+                <linearGradient data-id="BOcK" id="demandGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop data-id="GCST" offset="0%" stop-color="#00E5FF" stop-opacity="0.8"></stop>
+                  <stop data-id="JLAY" offset="50%" stop-color="#8B5CF6" stop-opacity="0.6"></stop>
+                  <stop data-id="9n_1" offset="100%" stop-color="#EC4899" stop-opacity="0.4"></stop>
+                </linearGradient>
+                <linearGradient data-id="0nMg" id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop data-id="a9_5" offset="0%" stop-color="#00E5FF" stop-opacity="0.2"></stop>
+                  <stop data-id="6kNI" offset="100%" stop-color="#EC4899" stop-opacity="0.1"></stop>
+                </linearGradient>
+              </defs>
+              <!-- Primary line path -->
+              <path
+                id="pathPrimary"
+                data-id="5pxV"
+                d="M50,250 Q200,180 400,150 T750,120"
+                fill="none"
+                stroke="url(#demandGradient)"
+                stroke-width="4"
+                class="animate-pulse"
+              ></path>
+              <!-- Area under curve -->
+              <path
+                id="pathArea"
+                data-id="mmSt"
+                d="M50,260 Q200,190 400,160 T750,130 L750,280 Q400,280 200,290 Z"
+                fill="url(#gradient2)"
+                class="animate-pulse"
+              ></path>
+              <!-- Circles at data points -->
+              <circle id="circle1" data-id="hadO" cx="200" cy="180" r="6" fill="#00E5FF" class="animate-bounce">
+                <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"></animate>
+              </circle>
+              <circle id="circle2" data-id="pZ56" cx="400" cy="150" r="6" fill="#8B5CF6" class="animate-bounce" style="animation-delay:0.5s">
+                <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"></animate>
+              </circle>
+              <circle id="circle3" data-id="XpXh" cx="600" cy="130" r="6" fill="#EC4899" class="animate-bounce" style="animation-delay:1s">
+                <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"></animate>
+              </circle>
+            </svg>
+          </div>
+        </div>
+        <div data-id="XNSV" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div
+            id="forecastResultsSection"
+            data-id="D9zC"
+            class="backdrop-blur-2xl bg-white/5 rounded-3xl p-8 border border-cyan-400/20 shadow-2xl"
+          >
+            <h2 data-id="YOHr" class="text-3xl font-bold text-white mb-6">
+              Forecast Results
+            </h2>
+            <div id="forecastResultsContainer" data-id="7G62" class="space-y-4">
+              <!-- Original 3 items; added data-sku and class on value <p> for JS -->
+              <div data-id="pPia" data-sku="RIC001" class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-all duration-300">
+                <div data-id="zAFC" class="flex items-center justify-between">
+                  <div data-id="A5e_">
+                    <h3 data-id="ZOGw" class="text-white font-semibold">Premium Rice (1kg)</h3>
+                    <p data-id="A4xv" class="text-gray-400">SKU: RIC001</p>
+                  </div>
+                  <div data-id="S0dX" class="text-right">
+                    <p data-id="leT_" class="forecast-value text-2xl font-bold text-cyan-400">2,450</p>
+                    <p data-id="LbO6" class="text-gray-400">units/month</p>
+                  </div>
+                </div>
+                <div data-id="7Ip5" class="flex space-x-2 mt-4">
+                  <button class="approve-btn px-4 py-2 bg-cyan-400 text-slate-900 rounded-lg hover:scale-105 transition-all duration-300">
+                    <span data-id="Zznr" class="material-symbols-outlined">check</span>
+                  </button>
+                  <button class="edit-btn px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300">
+                    <span data-id="kenc" class="material-symbols-outlined">edit</span>
+                  </button>
+                  <button class="reject-btn px-4 py-2 bg-pink-500 text-white rounded-lg hover:scale-105 transition-all duration-300">
+                    <span data-id="7Q_s" class="material-symbols-outlined">close</span>
+                  </button>
+                </div>
+              </div>
+              <div data-id="58WU" data-sku="PUL002" class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-all duration-300">
+                <div data-id="5MpL" class="flex items-center justify-between">
+                  <div data-id="URpk">
+                    <h3 data-id="qfYz" class="text-white font-semibold">Organic Pulses Mix</h3>
+                    <p data-id="I17_" class="text-gray-400">SKU: PUL002</p>
+                  </div>
+                  <div data-id="-MUp" class="text-right">
+                    <p data-id="zJ3t" class="forecast-value text-2xl font-bold text-purple-400">1,850</p>
+                    <p data-id="OaTy" class="text-gray-400">units/month</p>
+                  </div>
+                </div>
+                <div data-id="izte" class="flex space-x-2 mt-4">
+                  <button class="approve-btn px-4 py-2 bg-cyan-400 text-slate-900 rounded-lg hover:scale-105 transition-all duration-300">
+                    <span data-id="u9A6" class="material-symbols-outlined">check</span>
+                  </button>
+                  <button class="edit-btn px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300">
+                    <span data-id="eDLu" class="material-symbols-outlined">edit</span>
+                  </button>
+                  <button class="reject-btn px-4 py-2 bg-pink-500 text-white rounded-lg hover:scale-105 transition-all duration-300">
+                    <span data-id="Js-k" class="material-symbols-outlined">close</span>
+                  </button>
+                </div>
+              </div>
+              <div data-id="6S8s" data-sku="WHE003" class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-all duration-300">
+                <div data-id="HIqi" class="flex items-center justify-between">
+                  <div data-id="3wQH">
+                    <h3 data-id="ycOO" class="text-white font-semibold">Wheat Flour (2kg)</h3>
+                    <p data-id="Ezjy" class="text-gray-400">SKU: WHE003</p>
+                  </div>
+                  <div data-id="1-IZ" class="text-right">
+                    <p data-id="Snw3" class="forecast-value text-2xl font-bold text-pink-400">3,200</p>
+                    <p data-id="bsc9" class="text-gray-400">units/month</p>
+                  </div>
+                </div>
+                <div data-id="fOci" class="flex space-x-2 mt-4">
+                  <button class="approve-btn px-4 py-2 bg-cyan-400 text-slate-900 rounded-lg hover:scale-105 transition-all duration-300">
+                    <span data-id="-Yr8" class="material-symbols-outlined">check</span>
+                  </button>
+                  <button class="edit-btn px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300">
+                    <span data-id="3c7t" class="material-symbols-outlined">edit</span>
+                  </button>
+                  <button class="reject-btn px-4 py-2 bg-pink-500 text-white rounded-lg hover:scale-105 transition-all duration-300">
+                    <span data-id="YPVV" class="material-symbols-outlined">close</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button
+              id="approveAllBtn"
+              data-id="Sau3"
+              class="w-full mt-6 bg-gradient-to-r from-cyan-400 to-purple-500 text-white py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+            >
+              Approve All Forecasts
+            </button>
+          </div>
+          <div
+            data-id="JCxU"
+            class="backdrop-blur-2xl bg-white/5 rounded-3xl p-8 border border-cyan-400/20 shadow-2xl"
+          >
+            <h2 data-id="k19R" class="text-3xl font-bold text-white mb-6">
+              AI Processing Status
+            </h2>
+            <div data-id="akgr" class="text-center mb-8">
+              <div data-id="r8e2" class="w-24 h-24 mx-auto mb-4 relative">
+                <div
+                  data-id="XEvy"
+                  class="w-full h-full border-4 border-cyan-400/30 rounded-full"
+                ></div>
+                <div
+                  id="aiSpinner"
+                  data-id="S9j4"
+                  class="absolute inset-0 w-full h-full border-4 border-cyan-400 rounded-full animate-spin border-t-transparent"
+                  style="display: none;"
+                ></div>
+                <span
+                  id="aiIcon"
+                  data-id="reuv"
+                  class="material-symbols-outlined absolute inset-0 flex items-center justify-center text-cyan-400 text-4xl"
+                >
+                  psychology
+                </span>
+              </div>
+              <p id="aiStatusText" data-id="v7aX" class="text-xl text-white font-semibold">
+                Idle
+              </p>
+              <p id="aiSubText" data-id="bcbV" class="text-gray-400">
+                Awaiting action
+              </p>
+            </div>
+            <div data-id="ZO-v" class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span data-id="6I1T" class="text-gray-300">Data Ingestion</span>
+                <span
+                  id="stepDataIngestion"
+                  data-id="Mx3U"
+                  class="material-symbols-outlined text-gray-500"
+                  >radio_button_unchecked</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <span data-id="_rKj" class="text-gray-300"
+                  >Pattern Recognition</span
+                >
+                <span
+                  id="stepPatternRecognition"
+                  data-id="QCrp"
+                  class="material-symbols-outlined text-gray-500"
+                  >radio_button_unchecked</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <span data-id="BDFN" class="text-gray-300">Seasonality Analysis</span>
+                <div
+                  id="stepSeasonality"
+                  data-id="yXG4"
+                  class="w-6 h-6 border-2 border-cyan-400 rounded-full animate-spin border-t-transparent"
+                  style="display: none;"
+                ></div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span data-id="Qlbo" class="text-gray-300">Confidence Calculation</span>
+                <span
+                  id="stepConfidence"
+                  data-id="yPFY"
+                  class="material-symbols-outlined text-gray-500"
+                  >radio_button_unchecked</span
+                >
+              </div>
+            </div>
+            <div data-id="7PLz" class="mt-8">
+              <div data-id="IWeJ" class="flex justify-between text-sm text-gray-400 mb-2">
+                <span data-id="CCR7">Overall Progress</span>
+                <span id="aiProgressPercent" data-id="jdip">0%</span>
+              </div>
+              <div data-id="d2zX" class="w-full bg-white/10 rounded-full h-3">
+                <div
+                  id="aiProgressBar"
+                  data-id="9U23"
+                  class="bg-gradient-to-r from-cyan-400 to-purple-500 h-3 rounded-full transition-all duration-500"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config remains unchanged
+      tailwind.config = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {"name":"Bluewave","fontFamily":{"sans":["Open Sans","ui-sans-serif","system-ui","sans-serif","\"Apple Color Emoji\"","\"Segoe UI Emoji\"","\"Segoe UI Symbol\"","\"Noto Color Emoji\""]},"extend":{"fontFamily":{"title":["Lato","ui-sans-serif","system-ui","sans-serif","\"Apple Color Emoji\"","\"Segoe UI Emoji\"","\"Segoe UI Symbol\"","\"Noto Color Emoji\""],"body":["Open Sans","ui-sans-serif","system-ui","sans-serif","\"Apple Color Emoji\"","\"Segoe UI Emoji\"","\"Segoe UI Symbol\"","\"Noto Color Emoji\""]},"colors":{"neutral":{"50":"#f7f7f7","100":"#eeeeee","200":"#e0e0e0","300":"#cacaca","400":"#b1b1b1","500":"#999999","600":"#7f7f7f","700":"#676767","800":"#545454","900":"#464646","950":"#282828"},"primary":{"50":"#f3f1ff","100":"#e9e5ff","200":"#d5cfff","300":"#b7a9ff","400":"#9478ff","500":"#7341ff","600":"#631bff","700":"#611bf8","800":"#4607d0","900":"#3c08aa","950":"#220174","DEFAULT":"#611bf8"}}},"fontSize":{"xs":["12px",{"lineHeight":"19.200000000000003px"}],"sm":["14px",{"lineHeight":"21px"}],"base":["16px",{"lineHeight":"25.6px"}],"lg":["18px",{"lineHeight":"27px"}],"xl":["20px",{"lineHeight":"28px"}],"2xl":["24px",{"lineHeight":"31.200000000000003px"}],"3xl":["30px",{"lineHeight":"36px"}],"4xl":["36px",{"lineHeight":"41.4px"}],"5xl":["48px",{"lineHeight":"52.800000000000004px"}],"6xl":["60px",{"lineHeight":"66px"}],"7xl":["72px",{"lineHeight":"75.60000000000001px"}],"8xl":["96px",{"lineHeight":"100.80000000001px"}],"9xl":["128px",{"lineHeight":"134.4px"}]},"borderRadius":{"none":"0px","sm":"6px","DEFAULT":"12px","md":"18px","lg":"24px","xl":"36px","2xl":"48px","3xl":"72px","full":"9999px"},"spacing":{"0":"0px","1":"4px","2":"8px","3":"12px","4":"16px","5":"20px","6":"24px","7":"28px","8":"32px","9":"36px","10":"40px","11":"44px","12":"48px","14":"56px","16":"64px","20":"80px","24":"96px","28":"112px","32":"128px","36":"144px","40":"160px","44":"176px","48":"192px","52":"208px","56":"224px","60":"240px","64":"256px","72":"288px","80":"320px","96":"384px","px":"1px","0.5":"2px","1.5":"6px","2.5":"10px","3.5":"14px"}},plugins:[],important:"#webcrumbs"};
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        // Time-range buttons: preserve original classes, toggle bg/text classes exactly as in original UI
+        const btn6M = document.getElementById("btn6M");
+        const btn12M = document.getElementById("btn12M");
+        const btn24M = document.getElementById("btn24M");
+        const dateStart = document.getElementById("customDateStart");
+        const dateEnd = document.getElementById("customDateEnd");
+
+        let selectedRange = "6M"; // default
+        function selectRange(btn) {
+          // Reset all to unselected style: bg-white/10 text-white
+          [btn6M, btn12M, btn24M].forEach(b => {
+            b.classList.remove("bg-cyan-400","text-slate-900");
+            b.classList.add("bg-white/10","text-white");
+          });
+          // Apply selected style on this: bg-cyan-400 text-slate-900
+          btn.classList.remove("bg-white/10","text-white");
+          btn.classList.add("bg-cyan-400","text-slate-900");
+        }
+        // Initial styling already in HTML: btn6M has bg-cyan-400 text-slate-900. Others bg-white/10 text-white.
+        btn6M.addEventListener("click", () => {
+          selectRange(btn6M);
+          selectedRange = "6M";
+          dateStart.value = "";
+          dateEnd.value = "";
+        });
+        btn12M.addEventListener("click", () => {
+          selectRange(btn12M);
+          selectedRange = "12M";
+          dateStart.value = "";
+          dateEnd.value = "";
+        });
+        btn24M.addEventListener("click", () => {
+          selectRange(btn24M);
+          selectedRange = "24M";
+          dateStart.value = "";
+          dateEnd.value = "";
+        });
+        // If user enters custom date, deselect presets
+        [dateStart, dateEnd].forEach(input => {
+          input.addEventListener("change", () => {
+            if (dateStart.value || dateEnd.value) {
+              [btn6M, btn12M, btn24M].forEach(b => {
+                b.classList.remove("bg-cyan-400","text-slate-900");
+                b.classList.add("bg-white/10","text-white");
+              });
+              selectedRange = null;
+            }
+          });
+        });
+
+        // Zoom / Refresh: adjust transform scale on visualizationContainer
+        const vizContainer = document.getElementById("visualizationContainer");
+        let currentScale = 1;
+        document.getElementById("zoomInBtn").addEventListener("click", () => {
+          currentScale = Math.min(currentScale + 0.1, 2);
+          vizContainer.style.transform = `scale(${currentScale})`;
+        });
+        document.getElementById("zoomOutBtn").addEventListener("click", () => {
+          currentScale = Math.max(currentScale - 0.1, 0.5);
+          vizContainer.style.transform = `scale(${currentScale})`;
+        });
+        document.getElementById("refreshVizBtn").addEventListener("click", () => {
+          if (lastForecastData) {
+            updateSVGPaths(lastForecastData);
+          }
+        });
+
+        // AI / Forecast simulation
+        const runBtn = document.getElementById("runForecastBtn");
+        const aiStatusText = document.getElementById("aiStatusText");
+        const aiSubText = document.getElementById("aiSubText");
+        const aiSpinner = document.getElementById("aiSpinner");
+        const aiIcon = document.getElementById("aiIcon");
+        const stepDataIngestion = document.getElementById("stepDataIngestion");
+        const stepPatternRecognition = document.getElementById("stepPatternRecognition");
+        const stepSeasonality = document.getElementById("stepSeasonality");
+        const stepConfidence = document.getElementById("stepConfidence");
+        const aiProgressBar = document.getElementById("aiProgressBar");
+        const aiProgressPercent = document.getElementById("aiProgressPercent");
+
+        let lastForecastData = null;
+
+        runBtn.addEventListener("click", () => {
+          simulateForecastProcess();
+        });
+
+        document.getElementById("approveAllBtn").addEventListener("click", () => {
+          if (lastForecastData && lastForecastData.length) {
+            alert("All forecasts approved!");
+          } else {
+            alert("No forecasts to approve yet.");
+          }
+        });
+
+        function simulateForecastProcess() {
+          runBtn.disabled = true;
+          runBtn.textContent = "Running...";
+          runBtn.classList.remove("animate-pulse");
+
+          aiStatusText.textContent = "Neural Network Processing...";
+          aiSubText.textContent = "Starting...";
+          aiSpinner.style.display = "block";
+          aiIcon.style.display = "none";
+          [stepDataIngestion, stepPatternRecognition, stepConfidence].forEach(el => {
+            el.textContent = "hourglass_empty";
+            el.className = "material-symbols-outlined text-gray-500";
+            el.style.display = "";
+          });
+          stepSeasonality.style.display = "none";
+          aiProgressBar.style.width = "0%";
+          aiProgressPercent.textContent = "0%";
+
+          const stepDurations = [1200, 1200, 1200, 1200]; // ms
+          const steps = [
+            { el: stepDataIngestion, label: "Data Ingestion" },
+            { el: stepPatternRecognition, label: "Pattern Recognition" },
+            { el: stepSeasonality, label: "Seasonality Analysis" },
+            { el: stepConfidence, label: "Confidence Calculation" },
+          ];
+          let idx = 0;
+
+          function updateStep(el, status) {
+            if (status === "inProgress") {
+              if (el === stepSeasonality) {
+                el.style.display = "block";
+                el.className = "w-6 h-6 border-2 border-cyan-400 rounded-full animate-spin border-t-transparent";
+              } else {
+                el.textContent = "autorenew";
+                el.className = "material-symbols-outlined text-cyan-400 animate-spin";
+              }
+            } else if (status === "done") {
+              el.textContent = "check_circle";
+              el.className = "material-symbols-outlined text-cyan-400";
+            }
+          }
+
+          function nextStep() {
+            if (idx > 0) {
+              updateStep(steps[idx - 1].el, "done");
+            }
+            if (idx < steps.length) {
+              const { el, label } = steps[idx];
+              aiSubText.textContent = label + "...";
+              updateStep(el, "inProgress");
+
+              const stepTime = stepDurations[idx];
+              const startWidth = parseInt(aiProgressBar.style.width) || 0;
+              const targetWidth = ((idx + 1) / steps.length) * 100;
+              const widthDelta = targetWidth - startWidth;
+              const intervalCount = 20;
+              let stepCount = 0;
+              const intervalTime = stepTime / intervalCount;
+              const progressInterval = setInterval(() => {
+                stepCount++;
+                const newWidth = startWidth + (widthDelta * stepCount) / intervalCount;
+                aiProgressBar.style.width = newWidth + "%";
+                aiProgressPercent.textContent = Math.round(newWidth) + "%";
+                if (stepCount >= intervalCount) clearInterval(progressInterval);
+              }, intervalTime);
+
+              setTimeout(() => {
+                idx++;
+                nextStep();
+              }, stepTime);
+            } else {
+              aiSpinner.style.display = "none";
+              aiIcon.style.display = "block";
+              aiStatusText.textContent = "Processing Complete";
+              aiSubText.textContent = "Forecast ready";
+              aiProgressBar.style.width = "100%";
+              aiProgressPercent.textContent = "100%";
+              runBtn.disabled = false;
+              runBtn.textContent = "Run Forecast";
+              runBtn.classList.add("animate-pulse");
+              generateAndApplyForecast();
+            }
+          }
+          nextStep();
+        }
+
+        function generateAndApplyForecast() {
+          // Base items match original 3 SKUs in HTML
+          const items = [
+            { sku: "RIC001", base: 2500 },
+            { sku: "PUL002", base: 1800 },
+            { sku: "WHE003", base: 3000 },
+          ];
+          const includeSeasonality = document.getElementById("includeSeasonality").checked;
+          const holidayImpact = document.getElementById("holidayImpact").checked;
+          const discountImpact = parseInt(document.getElementById("discountImpact").value);
+          const marketingSpend = parseInt(document.getElementById("marketingSpend").value);
+          const factor = 1 + (marketingSpend - discountImpact) / 500;
+
+          const results = items.map(item => {
+            let variation = 1 + (Math.random() * 0.2 - 0.1);
+            let value = item.base * variation * factor;
+            if (includeSeasonality) value *= 1 + (Math.random() * 0.1);
+            if (holidayImpact) value *= 1 + (Math.random() * 0.05);
+            return { sku: item.sku, forecast: Math.round(value) };
+          });
+          lastForecastData = results;
+          // Update the three existing result divs in place
+          results.forEach(res => {
+            // Find the container with matching data-sku
+            const itemDiv = document.querySelector(`#forecastResultsContainer [data-sku="${res.sku}"]`);
+            if (itemDiv) {
+              // Update the <p class="forecast-value"> inside
+              const p = itemDiv.querySelector(".forecast-value");
+              if (p) {
+                p.textContent = res.forecast.toLocaleString();
+              }
+            }
+          });
+          // Update SVG paths & circles
+          updateSVGPaths(results);
+        }
+
+        function updateSVGPaths(data) {
+          // data has 3 items => use 3 points at x=200,400,600 mapped to y within SVG viewBox 0..300
+          const svgHeight = 300;
+          const marginBottom = 20;
+          // Find max forecast to scale
+          const maxVal = Math.max(...data.map(d=>d.forecast));
+          // Map forecasts to y-values: larger forecast => smaller y (higher on chart)
+          const yValues = data.map(d => {
+            const ratio = d.forecast / maxVal;
+            // leave some top margin
+            const y = svgHeight - marginBottom - ratio * (svgHeight - marginBottom - 40);
+            return Math.max(20, Math.min(svgHeight - marginBottom, y));
+          });
+          // X positions fixed: [200, 400, 600]
+          const xs = [200, 400, 600];
+          // Build path string: move to first, then quadratic or cubic through others
+          // For simplicity: use quadratic between each pair: M x0,y0 Q midX,midY x1,y1 T x2,y2
+          const [x0,y0] = [xs[0], yValues[0]];
+          const [x1,y1] = [xs[1], yValues[1]];
+          const [x2,y2] = [xs[2], yValues[2]];
+          // Compute control points roughly halfway to create smooth curve
+          const midX01 = (x0 + x1)/2, midY01 = (y0 + y1)/2;
+          const midX12 = (x1 + x2)/2, midY12 = (y1 + y2)/2;
+          // Primary path:
+          const dPrimary = `M50,${svgHeight - marginBottom} Q${x0},${y0} ${x1},${y1} T${x2},${y2}`;
+          // Area path: from baseline to curve and back
+          const dArea = `M50,${svgHeight - marginBottom} Q${x0},${y0} ${x1},${y1} T${x2},${y2} L${x2},${svgHeight} Q${x1},${svgHeight} ${x0},${svgHeight} Z`;
+          // Update paths
+          const pathP = document.getElementById("pathPrimary");
+          const pathA = document.getElementById("pathArea");
+          if (pathP) pathP.setAttribute("d", dPrimary);
+          if (pathA) pathA.setAttribute("d", dArea);
+          // Update circles
+          const circle1 = document.getElementById("circle1");
+          const circle2 = document.getElementById("circle2");
+          const circle3 = document.getElementById("circle3");
+          if (circle1) { circle1.setAttribute("cx", xs[0]); circle1.setAttribute("cy", yValues[0]); }
+          if (circle2) { circle2.setAttribute("cx", xs[1]); circle2.setAttribute("cy", yValues[1]); }
+          if (circle3) { circle3.setAttribute("cx", xs[2]); circle3.setAttribute("cy", yValues[2]); }
+        }
+
+        // Initial state: lastForecastData = null; SVG remains as original until first forecast
+      });
+    </script>
+  </body>
+</html>
